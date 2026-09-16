@@ -216,6 +216,149 @@ function initializeSubmitFeedback() {
   });
 }
 
+
+function initializeAuthCompanion() {
+  const shell = document.querySelector(".auth-shell");
+  const companion = document.querySelector("#auth-companion");
+  if (!shell || !companion) return;
+
+  const form = shell.querySelector("form.auth-fields");
+  const email = shell.querySelector("#email");
+  const password = shell.querySelector("#password");
+  const confirmation = shell.querySelector("#password_confirmation");
+  const caption = companion.querySelector("[data-companion-caption]");
+  const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
+  const finePointer = matchMedia("(pointer: fine)");
+  let state = companion.dataset.state || "idle";
+  let typingTimer;
+  let frame;
+  let targetX = 0;
+  let targetY = 0;
+  let currentX = 0;
+  let currentY = 0;
+
+  const captions = {
+    idle: "Sistem siap digunakan.",
+    email: "Silakan masukkan alamat email Anda.",
+    "email-typing": "Membaca alamat email…",
+    password: "Password Anda tetap terlindungi.",
+    peek: "Password sedang ditampilkan.",
+    error: "Kredensial belum sesuai. Periksa kembali.",
+    checking: "Memverifikasi kredensial…",
+  };
+
+  const setState = (nextState) => {
+    state = nextState;
+    companion.dataset.state = nextState;
+    shell.dataset.authState = nextState;
+    if (caption) caption.textContent = captions[nextState] || captions.idle;
+  };
+
+  const focusedState = () => {
+    const active = document.activeElement;
+    if (active === email) return "email";
+    if (active === password || active === confirmation) {
+      return active.type === "text" ? "peek" : "password";
+    }
+    return "idle";
+  };
+
+  const resetLook = () => {
+    targetX = 0;
+    targetY = 0;
+  };
+
+  const animateLook = () => {
+    currentX += (targetX - currentX) * 0.16;
+    currentY += (targetY - currentY) * 0.16;
+    companion.style.setProperty("--look-x", `${currentX.toFixed(2)}px`);
+    companion.style.setProperty("--look-y", `${currentY.toFixed(2)}px`);
+    companion.style.setProperty("--head-x", `${(currentX * 0.34).toFixed(2)}px`);
+    companion.style.setProperty("--head-y", `${(currentY * 0.28).toFixed(2)}px`);
+    frame = requestAnimationFrame(animateLook);
+  };
+
+  if (!reducedMotion.matches && finePointer.matches) {
+    document.addEventListener("pointermove", (event) => {
+      if (state === "password" || state === "error" || state === "checking") {
+        resetLook();
+        return;
+      }
+      const rect = companion.getBoundingClientRect();
+      const centerX = rect.left + rect.width * 0.5;
+      const centerY = rect.top + rect.height * 0.42;
+      const normalizedX = Math.max(-1, Math.min(1, (event.clientX - centerX) / Math.max(rect.width * 0.55, 1)));
+      const normalizedY = Math.max(-1, Math.min(1, (event.clientY - centerY) / Math.max(rect.height * 0.55, 1)));
+      targetX = normalizedX * 8;
+      targetY = normalizedY * 5.5;
+    }, { passive: true });
+    document.documentElement.addEventListener("mouseleave", resetLook);
+    frame = requestAnimationFrame(animateLook);
+  }
+
+  email?.addEventListener("focus", () => setState("email"));
+  email?.addEventListener("input", () => {
+    setState("email-typing");
+    clearTimeout(typingTimer);
+    typingTimer = setTimeout(() => {
+      if (document.activeElement === email) setState("email");
+    }, 360);
+  });
+
+  [password, confirmation].filter(Boolean).forEach((input) => {
+    input.addEventListener("focus", () => setState(input.type === "text" ? "peek" : "password"));
+    input.addEventListener("input", () => {
+      if (document.activeElement === input) setState(input.type === "text" ? "peek" : "password");
+    });
+  });
+
+  shell.querySelectorAll(".password-toggle").forEach((button) => {
+    button.addEventListener("click", () => {
+      const input = document.getElementById(button.getAttribute("aria-controls"));
+      if (input && document.activeElement === input) {
+        setState(input.type === "text" ? "peek" : "password");
+      }
+    });
+  });
+
+  shell.querySelectorAll("input").forEach((input) => {
+    input.addEventListener("blur", () => {
+      requestAnimationFrame(() => {
+        if (!shell.contains(document.activeElement) || document.activeElement?.tagName !== "INPUT") {
+          setState("idle");
+        } else {
+          setState(focusedState());
+        }
+      });
+    });
+    input.addEventListener("invalid", () => setState("error"));
+  });
+
+  form?.addEventListener("submit", () => {
+    setState("checking");
+    resetLook();
+  });
+
+  if (state === "error") {
+    setState("error");
+    resetLook();
+  } else {
+    setState(focusedState());
+  }
+
+  reducedMotion.addEventListener?.("change", (event) => {
+    if (event.matches && frame) {
+      cancelAnimationFrame(frame);
+      frame = undefined;
+      resetLook();
+      companion.style.removeProperty("--look-x");
+      companion.style.removeProperty("--look-y");
+      companion.style.removeProperty("--head-x");
+      companion.style.removeProperty("--head-y");
+    }
+  });
+}
+
 function initializeStockLookup() {
   const item = document.querySelector("select#barang_id");
   const hint = document.querySelector("#stock-hint");
@@ -252,6 +395,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initializePasswordToggles();
   initializeRememberedEmail();
   initializeSubmitFeedback();
+  initializeAuthCompanion();
   initializeStockLookup();
   if (window.DataTable)
     document
