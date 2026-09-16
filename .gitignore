@@ -1,0 +1,15 @@
+.env
+/vendor/
+/.runtime/
+/storage/logs/*
+!/storage/logs/.gitkeep
+/storage/exports/*
+!/storage/exports/.gitkeep
+/storage/uploads/*
+!/storage/uploads/.gitkeep
+/tests/results.json
+/.phpunit.cache/
+
+/tests/read-model-results.json
+
+~$*.docx

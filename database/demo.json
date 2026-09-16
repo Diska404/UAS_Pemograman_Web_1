@@ -1,0 +1,563 @@
+{
+  "as_of": "2026-09-15",
+  "password_hash": "$2y$12$kFdEaMoUQcRc5Og81Ql5/eURoybWaoDK..VIJY1WDWX4ijOpdcb7C",
+  "warehouses": [
+    "Gudang Perangkat IT",
+    "Gudang Komponen",
+    "Gudang IoT & Networking"
+  ],
+  "suppliers": [
+    "PT Nusantara Teknologi Distribusi",
+    "PT Sumber Komputer Indonesia",
+    "PT Digital Komponen Utama",
+    "PT Solusi Peripheral Indonesia",
+    "PT Jaringan Data Nusantara",
+    "PT Infrastruktur Net Indonesia",
+    "PT Embedded Teknologi Indonesia",
+    "PT IoT Solusi Nusantara",
+    "PT Mitra Elektronik Digital",
+    "PT Cakra Teknologi Mandiri"
+  ],
+  "products": [
+    {
+      "id": 1,
+      "code": "LPT-001",
+      "name": "Acer Predator Helios Neo 16 PHN16-71",
+      "category": "Laptop & Komputer",
+      "warehouse_id": 1,
+      "minimum": 2,
+      "stock": 7
+    },
+    {
+      "id": 2,
+      "code": "LPT-002",
+      "name": "ASUS Vivobook 14",
+      "category": "Laptop & Komputer",
+      "warehouse_id": 1,
+      "minimum": 2,
+      "stock": 10
+    },
+    {
+      "id": 3,
+      "code": "LPT-003",
+      "name": "Lenovo ThinkPad E14",
+      "category": "Laptop & Komputer",
+      "warehouse_id": 1,
+      "minimum": 2,
+      "stock": 10
+    },
+    {
+      "id": 4,
+      "code": "LPT-004",
+      "name": "HP ProBook 440 G10",
+      "category": "Laptop & Komputer",
+      "warehouse_id": 1,
+      "minimum": 2,
+      "stock": 5
+    },
+    {
+      "id": 5,
+      "code": "LPT-005",
+      "name": "Dell Latitude 5440",
+      "category": "Laptop & Komputer",
+      "warehouse_id": 1,
+      "minimum": 2,
+      "stock": 8
+    },
+    {
+      "id": 6,
+      "code": "LPT-006",
+      "name": "ASUS ExpertBook B1 B1402",
+      "category": "Laptop & Komputer",
+      "warehouse_id": 1,
+      "minimum": 2,
+      "stock": 8
+    },
+    {
+      "id": 7,
+      "code": "LPT-007",
+      "name": "Lenovo IdeaPad Slim 5 14",
+      "category": "Laptop & Komputer",
+      "warehouse_id": 1,
+      "minimum": 2,
+      "stock": 11
+    },
+    {
+      "id": 8,
+      "code": "LPT-008",
+      "name": "Acer Aspire 5 A515",
+      "category": "Laptop & Komputer",
+      "warehouse_id": 1,
+      "minimum": 2,
+      "stock": 6
+    },
+    {
+      "id": 9,
+      "code": "LPT-009",
+      "name": "MSI Modern 14",
+      "category": "Laptop & Komputer",
+      "warehouse_id": 1,
+      "minimum": 2,
+      "stock": 2
+    },
+    {
+      "id": 10,
+      "code": "LPT-010",
+      "name": "Apple Mac mini M4",
+      "category": "Laptop & Komputer",
+      "warehouse_id": 1,
+      "minimum": 2,
+      "stock": 1
+    },
+    {
+      "id": 11,
+      "code": "MON-001",
+      "name": "LG UltraGear 27GR75Q-B",
+      "category": "Monitor & Display",
+      "warehouse_id": 1,
+      "minimum": 3,
+      "stock": 1
+    },
+    {
+      "id": 12,
+      "code": "MON-002",
+      "name": "Samsung Odyssey G5 G55C 27 Inch",
+      "category": "Monitor & Display",
+      "warehouse_id": 1,
+      "minimum": 3,
+      "stock": 0
+    },
+    {
+      "id": 13,
+      "code": "MON-003",
+      "name": "AOC 24G2SP",
+      "category": "Monitor & Display",
+      "warehouse_id": 1,
+      "minimum": 3,
+      "stock": 10
+    },
+    {
+      "id": 14,
+      "code": "MON-004",
+      "name": "Xiaomi Gaming Monitor G27i",
+      "category": "Monitor & Display",
+      "warehouse_id": 1,
+      "minimum": 3,
+      "stock": 14
+    },
+    {
+      "id": 15,
+      "code": "MON-005",
+      "name": "ASUS TUF Gaming VG27AQ3A",
+      "category": "Monitor & Display",
+      "warehouse_id": 1,
+      "minimum": 3,
+      "stock": 15
+    },
+    {
+      "id": 16,
+      "code": "MON-006",
+      "name": "MSI G274QPF E2",
+      "category": "Monitor & Display",
+      "warehouse_id": 1,
+      "minimum": 3,
+      "stock": 7
+    },
+    {
+      "id": 17,
+      "code": "MON-007",
+      "name": "Dell P2422H",
+      "category": "Monitor & Display",
+      "warehouse_id": 1,
+      "minimum": 3,
+      "stock": 11
+    },
+    {
+      "id": 18,
+      "code": "MON-008",
+      "name": "LG 24MR400-B",
+      "category": "Monitor & Display",
+      "warehouse_id": 1,
+      "minimum": 3,
+      "stock": 12
+    },
+    {
+      "id": 19,
+      "code": "MON-009",
+      "name": "Samsung Essential Monitor S3",
+      "category": "Monitor & Display",
+      "warehouse_id": 1,
+      "minimum": 3,
+      "stock": 16
+    },
+    {
+      "id": 20,
+      "code": "MON-010",
+      "name": "ASUS ProArt PA248QV",
+      "category": "Monitor & Display",
+      "warehouse_id": 1,
+      "minimum": 3,
+      "stock": 8
+    },
+    {
+      "id": 21,
+      "code": "KOM-001",
+      "name": "Palit GeForce RTX 5070 GamingPro 12GB",
+      "category": "Komponen Komputer",
+      "warehouse_id": 2,
+      "minimum": 4,
+      "stock": 4
+    },
+    {
+      "id": 22,
+      "code": "KOM-002",
+      "name": "Intel Core i5-14600K",
+      "category": "Komponen Komputer",
+      "warehouse_id": 2,
+      "minimum": 4,
+      "stock": 3
+    },
+    {
+      "id": 23,
+      "code": "KOM-003",
+      "name": "AMD Ryzen 7 7700",
+      "category": "Komponen Komputer",
+      "warehouse_id": 2,
+      "minimum": 4,
+      "stock": 2
+    },
+    {
+      "id": 24,
+      "code": "KOM-004",
+      "name": "Kingston FURY Beast DDR5 32GB",
+      "category": "Komponen Komputer",
+      "warehouse_id": 2,
+      "minimum": 4,
+      "stock": 0
+    },
+    {
+      "id": 25,
+      "code": "KOM-005",
+      "name": "Corsair Vengeance DDR5 32GB",
+      "category": "Komponen Komputer",
+      "warehouse_id": 2,
+      "minimum": 4,
+      "stock": 13
+    },
+    {
+      "id": 26,
+      "code": "KOM-006",
+      "name": "Samsung 990 PRO 1TB NVMe SSD",
+      "category": "Komponen Komputer",
+      "warehouse_id": 2,
+      "minimum": 4,
+      "stock": 18
+    },
+    {
+      "id": 27,
+      "code": "KOM-007",
+      "name": "WD_BLACK SN850X 2TB NVMe SSD",
+      "category": "Komponen Komputer",
+      "warehouse_id": 2,
+      "minimum": 4,
+      "stock": 20
+    },
+    {
+      "id": 28,
+      "code": "KOM-008",
+      "name": "MSI B650 Gaming Plus WiFi",
+      "category": "Komponen Komputer",
+      "warehouse_id": 2,
+      "minimum": 4,
+      "stock": 9
+    },
+    {
+      "id": 29,
+      "code": "KOM-009",
+      "name": "ASUS TUF Gaming B760-PLUS WiFi",
+      "category": "Komponen Komputer",
+      "warehouse_id": 2,
+      "minimum": 4,
+      "stock": 14
+    },
+    {
+      "id": 30,
+      "code": "KOM-010",
+      "name": "Corsair RM850e 850W",
+      "category": "Komponen Komputer",
+      "warehouse_id": 2,
+      "minimum": 4,
+      "stock": 16
+    },
+    {
+      "id": 31,
+      "code": "PER-001",
+      "name": "Logitech G304 LIGHTSPEED",
+      "category": "Peripheral",
+      "warehouse_id": 1,
+      "minimum": 5,
+      "stock": 26
+    },
+    {
+      "id": 32,
+      "code": "PER-002",
+      "name": "Logitech MX Master 3S",
+      "category": "Peripheral",
+      "warehouse_id": 1,
+      "minimum": 5,
+      "stock": 12
+    },
+    {
+      "id": 33,
+      "code": "PER-003",
+      "name": "Logitech K380",
+      "category": "Peripheral",
+      "warehouse_id": 1,
+      "minimum": 5,
+      "stock": 5
+    },
+    {
+      "id": 34,
+      "code": "PER-004",
+      "name": "Keychron K2",
+      "category": "Peripheral",
+      "warehouse_id": 1,
+      "minimum": 5,
+      "stock": 4
+    },
+    {
+      "id": 35,
+      "code": "PER-005",
+      "name": "HyperX Cloud III",
+      "category": "Peripheral",
+      "warehouse_id": 1,
+      "minimum": 5,
+      "stock": 3
+    },
+    {
+      "id": 36,
+      "code": "PER-006",
+      "name": "Logitech C920 HD Pro Webcam",
+      "category": "Peripheral",
+      "warehouse_id": 1,
+      "minimum": 5,
+      "stock": 0
+    },
+    {
+      "id": 37,
+      "code": "PER-007",
+      "name": "Razer DeathAdder V3",
+      "category": "Peripheral",
+      "warehouse_id": 1,
+      "minimum": 5,
+      "stock": 16
+    },
+    {
+      "id": 38,
+      "code": "PER-008",
+      "name": "SteelSeries Rival 3",
+      "category": "Peripheral",
+      "warehouse_id": 1,
+      "minimum": 5,
+      "stock": 22
+    },
+    {
+      "id": 39,
+      "code": "PER-009",
+      "name": "Fantech MAXFIT61",
+      "category": "Peripheral",
+      "warehouse_id": 1,
+      "minimum": 5,
+      "stock": 25
+    },
+    {
+      "id": 40,
+      "code": "PER-010",
+      "name": "Logitech H390 USB Headset",
+      "category": "Peripheral",
+      "warehouse_id": 1,
+      "minimum": 5,
+      "stock": 11
+    },
+    {
+      "id": 41,
+      "code": "NET-001",
+      "name": "TP-Link Archer AX55",
+      "category": "Networking",
+      "warehouse_id": 3,
+      "minimum": 4,
+      "stock": 14
+    },
+    {
+      "id": 42,
+      "code": "NET-002",
+      "name": "TP-Link TL-SG108",
+      "category": "Networking",
+      "warehouse_id": 3,
+      "minimum": 4,
+      "stock": 16
+    },
+    {
+      "id": 43,
+      "code": "NET-003",
+      "name": "TP-Link Omada EAP610",
+      "category": "Networking",
+      "warehouse_id": 3,
+      "minimum": 4,
+      "stock": 21
+    },
+    {
+      "id": 44,
+      "code": "NET-004",
+      "name": "Ubiquiti UniFi U6+",
+      "category": "Networking",
+      "warehouse_id": 3,
+      "minimum": 4,
+      "stock": 10
+    },
+    {
+      "id": 45,
+      "code": "NET-005",
+      "name": "MikroTik hAP ax3",
+      "category": "Networking",
+      "warehouse_id": 3,
+      "minimum": 4,
+      "stock": 4
+    },
+    {
+      "id": 46,
+      "code": "NET-006",
+      "name": "MikroTik RB5009UG+S+IN",
+      "category": "Networking",
+      "warehouse_id": 3,
+      "minimum": 4,
+      "stock": 3
+    },
+    {
+      "id": 47,
+      "code": "NET-007",
+      "name": "TP-Link TL-SG1210P",
+      "category": "Networking",
+      "warehouse_id": 3,
+      "minimum": 4,
+      "stock": 2
+    },
+    {
+      "id": 48,
+      "code": "NET-008",
+      "name": "D-Link DGS-1008A",
+      "category": "Networking",
+      "warehouse_id": 3,
+      "minimum": 4,
+      "stock": 0
+    },
+    {
+      "id": 49,
+      "code": "NET-009",
+      "name": "Tenda RX9 Pro",
+      "category": "Networking",
+      "warehouse_id": 3,
+      "minimum": 4,
+      "stock": 13
+    },
+    {
+      "id": 50,
+      "code": "NET-010",
+      "name": "Ubiquiti UniFi Dream Router",
+      "category": "Networking",
+      "warehouse_id": 3,
+      "minimum": 4,
+      "stock": 18
+    },
+    {
+      "id": 51,
+      "code": "IOT-001",
+      "name": "Espressif ESP32-S3-DevKitC-1",
+      "category": "IoT & Embedded",
+      "warehouse_id": 3,
+      "minimum": 8,
+      "stock": 40
+    },
+    {
+      "id": 52,
+      "code": "IOT-002",
+      "name": "AI-Thinker ESP32-CAM",
+      "category": "IoT & Embedded",
+      "warehouse_id": 3,
+      "minimum": 8,
+      "stock": 17
+    },
+    {
+      "id": 53,
+      "code": "IOT-003",
+      "name": "Arduino UNO R4 WiFi",
+      "category": "IoT & Embedded",
+      "warehouse_id": 3,
+      "minimum": 8,
+      "stock": 26
+    },
+    {
+      "id": 54,
+      "code": "IOT-004",
+      "name": "Raspberry Pi 5 8GB",
+      "category": "IoT & Embedded",
+      "warehouse_id": 3,
+      "minimum": 8,
+      "stock": 32
+    },
+    {
+      "id": 55,
+      "code": "IOT-005",
+      "name": "Raspberry Pi Pico W",
+      "category": "IoT & Embedded",
+      "warehouse_id": 3,
+      "minimum": 8,
+      "stock": 41
+    },
+    {
+      "id": 56,
+      "code": "IOT-006",
+      "name": "HC-SR04 Ultrasonic Sensor",
+      "category": "IoT & Embedded",
+      "warehouse_id": 3,
+      "minimum": 8,
+      "stock": 18
+    },
+    {
+      "id": 57,
+      "code": "IOT-007",
+      "name": "DHT22 Temperature and Humidity Sensor",
+      "category": "IoT & Embedded",
+      "warehouse_id": 3,
+      "minimum": 8,
+      "stock": 8
+    },
+    {
+      "id": 58,
+      "code": "IOT-008",
+      "name": "HC-SR501 PIR Motion Sensor",
+      "category": "IoT & Embedded",
+      "warehouse_id": 3,
+      "minimum": 8,
+      "stock": 7
+    },
+    {
+      "id": 59,
+      "code": "IOT-009",
+      "name": "TowerPro MG996R Servo",
+      "category": "IoT & Embedded",
+      "warehouse_id": 3,
+      "minimum": 8,
+      "stock": 6
+    },
+    {
+      "id": 60,
+      "code": "IOT-010",
+      "name": "5V 2-Channel Relay Module",
+      "category": "IoT & Embedded",
+      "warehouse_id": 3,
+      "minimum": 8,
+      "stock": 0
+    }
+  ]
+}
